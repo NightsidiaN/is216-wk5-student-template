@@ -47,8 +47,8 @@ function reset() {
         <div style="margin-top: 14px;">
             <!-- C. Display winner / status here -->
             <p v-if="scoreA != maxScore && scoreB != maxScore">No winner yet. Keep playing!</p>
-            <p v-else-if="scoreA > scoreB">Winner: {{ teamA }}</p>
-            <p v-else="">Winner: {{ teamB }}</p>
+            <p v-else-if="scoreA > scoreB">Winner: {{ teamA.toUpperCase() }}</p>
+            <p v-else="">Winner: {{ teamB.toUpperCase() }}</p>
         </div>
 
 
