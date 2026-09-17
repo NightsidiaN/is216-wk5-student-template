@@ -8,8 +8,22 @@ const selectedOp = ref("+")
 
 // TODO: Add Code Here
 // Note: DO NOT USE "eval()". In security, "eval" is considered "evil"!!!
+const operation = {
+    "+": (x, y) => x + y,
+    "-": (x, y) => x - y,
+    "*": (x, y) => x * y,
+    "/": (x, y) => x / y,
+    "%": (x, y) => x % y
+}
+// dictionary where the values are temporary functions 
 
-    
+const result = computed(() => {
+    return operation[selectedOp.value](x.value, y.value)
+})
+// eg: operation["+"](6, 7)
+// find in the dictionary: "+", then input x y values as 6 7 
+
+
 </script>
 
 <template>
